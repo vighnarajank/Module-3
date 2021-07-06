@@ -7,12 +7,12 @@ export default function Login() {
     
     const [email, setEmail] = useState("");
     
-    const [url, setUrl] = useState("");
+    const [imageUrl, setUrl] = useState("");
     
     const responseGoogle = (response) => {
             setName(response.profileObj.name);
             setEmail(response.profileObj.email);
-            setUrl(response.profileObj.url);
+            setUrl(response.profileObj.imageUrl);
         };
     
     return (
@@ -20,7 +20,7 @@ export default function Login() {
             <h1>Google Login Page</h1>
             <h2>Welcome : {name}</h2>
             <h2>Email : {email}</h2>
-            <img src={url} alt={name}></img><br/>
+            <img src={imageUrl} alt={name}></img><br/>
             <GoogleLogin
                 clientId="655256088984-re412l8tu5m401jogo62svsvqdo8ctrv.apps.googleusercontent.com"
                 buttonText="Login"

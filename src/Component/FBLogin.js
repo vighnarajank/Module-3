@@ -39,12 +39,15 @@ export default class FBLogin extends Component {
                 </>
             );
         } else {
-            fbContent = (<FacebookLogin
+            fbContent = (
+                <FacebookLogin
                     appId="339059331046010"
-                    autoLoad={true}
+                    autoLoad={false}
                     fields="name,email,picture"
                     onClick={this.componentClicked}
-                    callback={this.responseFacebook} />);
+                    callback={this.responseFacebook} 
+                />
+            );
         }
         
         return (
